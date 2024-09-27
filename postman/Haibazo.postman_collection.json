@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "a9b666d4-a136-4319-bbe7-1b7f0b059d39",
+		"name": "Haibazo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "21560000"
+	},
+	"item": [
+		{
+			"name": "get List Product",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/product"
+			},
+			"response": [{"product_name":"Stylish T-Shirt","product_image":"https://example.com/images/stylish-tshirt.jpg","rating":{"rating_id":0,"rating":4.5,"review":[{"comment":"Great quality and fit!","comment_image":"https://example.com/images/review1.jpg","comment_video":"https://example.com/videos/review1.mp4","id":3},{"comment":"Very comfortable to wear.","comment_image":null,"comment_video":null,"id":4}],"id":2},"original_price":29.99,"promotional_price":24.99,"detail":{"product_description":"A comfortable and stylish t-shirt for everyday wear.","product_image_description":[{"urlImage":"https://example.com/images/tshirt-front.jpg","id":3},{"urlImage":"https://example.com/images/tshirt-back.jpg","id":4}],"product_hurry_up":"2024-10-15","product_color":[{"color":"Red","id":4},{"color":"Blue","id":5},{"color":"Black","id":6}],"product_size":[{"size":"S","id":5},{"size":"M","id":6},{"size":"L","id":7},{"size":"XL","id":8}],"id":2},"id":2},{"product_name":"Updated Stylish T-Shirt","product_image":"https://example.com/images/updated-stylish-tshirt.jpg","rating":{"rating_id":0,"rating":4.8,"review":[{"comment":"Even better than before!","comment_image":"https://example.com/images/review2.jpg","comment_video":null,"id":6}],"id":3},"original_price":24.99,"promotional_price":19.99,"detail":{"product_description":"An even more comfortable and stylish t-shirt for everyday wear.","product_image_description":[{"urlImage":"https://example.com/images/tshirt-front.jpg","id":5},{"urlImage":"https://example.com/images/tshirt-back.jpg","id":6},{"urlImage":"https://example.com/images/updated-tshirt-front.jpg","id":7}],"product_hurry_up":"2024-11-15","product_color":[{"color":"Red","id":7},{"color":"Blue","id":8},{"color":"Black","id":9},{"color":"Green","id":10}],"product_size":[{"size":"S","id":9},{"size":"M","id":10},{"size":"L","id":11},{"size":"XL","id":12},{"size":"M","id":13}],"id":3},"id":3}]
+		},
+		{
+			"name": "Get Product By ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/product/2"
+			},
+			"response": {"product_name":"Stylish T-Shirt","product_image":"https://example.com/images/stylish-tshirt.jpg","rating":{"rating_id":0,"rating":4.5,"review":[{"comment":"Great quality and fit!","comment_image":"https://example.com/images/review1.jpg","comment_video":"https://example.com/videos/review1.mp4","id":3},{"comment":"Very comfortable to wear.","comment_image":null,"comment_video":null,"id":4}],"id":2},"original_price":29.99,"promotional_price":24.99,"detail":{"product_description":"A comfortable and stylish t-shirt for everyday wear.","product_image_description":[{"urlImage":"https://example.com/images/tshirt-front.jpg","id":3},{"urlImage":"https://example.com/images/tshirt-back.jpg","id":4}],"product_hurry_up":"2024-10-15","product_color":[{"color":"Red","id":4},{"color":"Blue","id":5},{"color":"Black","id":6}],"product_size":[{"size":"S","id":5},{"size":"M","id":6},{"size":"L","id":7},{"size":"XL","id":8}],"id":2},"id":2}
+		},
+		{
+			"name": "Create Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"product_name\": \"Stylish T-Shirt\",\r\n  \"product_image\": \"https://example.com/images/stylish-tshirt.jpg\",\r\n  \"original_price\": 29.99,\r\n  \"promotional_price\": 24.99,\r\n  \"rating\": {\r\n    \"rating\": 4.5,\r\n    \"review\": [\r\n      {\r\n        \"comment\": \"Great product!\",\r\n        \"comment_image\": \"https://example.com/images/review1.jpg\",\r\n        \"comment_video\": null\r\n      }\r\n    ]\r\n  },\r\n  \"detail\": {\r\n    \"product_description\": \"A comfortable and stylish t-shirt for everyday wear.\",\r\n    \"product_hurry_up\": \"2024-10-15\",\r\n    \"product_image_description\": [\r\n      {\r\n        \"urlImage\": \"https://example.com/images/tshirt-front.jpg\"\r\n      },\r\n      {\r\n        \"urlImage\": \"https://example.com/images/tshirt-back.jpg\"\r\n      }\r\n    ],\r\n    \"product_color\": [\r\n      {\r\n        \"color\": \"Red\"\r\n      },\r\n      {\r\n        \"color\": \"Blue\"\r\n      },\r\n      {\r\n        \"color\": \"Black\"\r\n      }\r\n    ],\r\n    \"product_size\": [\r\n      {\r\n        \"size\": \"S\"\r\n      },\r\n      {\r\n        \"size\": \"M\"\r\n      },\r\n      {\r\n        \"size\": \"L\"\r\n      },\r\n      {\r\n        \"size\": \"XL\"\r\n      }\r\n    ]\r\n  }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/product"
+			},
+			"response": {"product_name":"Stylish T-Shirt","product_image":"https://example.com/images/stylish-tshirt.jpg","rating":{"rating_id":0,"rating":4.5,"review":[{"comment":"Great product!","comment_image":"https://example.com/images/review1.jpg","comment_video":null,"id":5}],"id":3},"original_price":29.99,"promotional_price":24.99,"detail":{"product_description":"A comfortable and stylish t-shirt for everyday wear.","product_image_description":[{"urlImage":"https://example.com/images/tshirt-front.jpg","id":5},{"urlImage":"https://example.com/images/tshirt-back.jpg","id":6}],"product_hurry_up":"2024-10-15","product_color":[{"color":"Red","id":7},{"color":"Blue","id":8},{"color":"Black","id":9}],"product_size":[{"size":"S","id":9},{"size":"M","id":10},{"size":"L","id":11},{"size":"XL","id":12}],"id":3},"id":3}
+		},
+		{
+			"name": "Update Product By ID",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"product_name\": \"Updated Stylish T-Shirt\",\r\n  \"product_image\": \"https://example.com/images/updated-stylish-tshirt.jpg\",\r\n  \"original_price\": 24.99,\r\n  \"promotional_price\": 19.99,\r\n  \"rating\": {\r\n    \"rating\": 4.8,\r\n    \"review\": [\r\n      {\r\n        \"comment\": \"Even better than before!\",\r\n        \"comment_image\": \"https://example.com/images/review2.jpg\",\r\n        \"comment_video\": null\r\n      }\r\n    ]\r\n  },\r\n  \"detail\": {\r\n    \"product_description\": \"An even more comfortable and stylish t-shirt for everyday wear.\",\r\n    \"product_hurry_up\": \"2024-11-15\",\r\n    \"product_image_description\": [\r\n      {\r\n        \"urlImage\": \"https://example.com/images/updated-tshirt-front.jpg\"\r\n      }\r\n    ],\r\n    \"product_color\": [\r\n      {\r\n        \"color\": \"Green\"\r\n      }\r\n    ],\r\n    \"product_size\": [\r\n      {\r\n        \"size\": \"M\"\r\n      }\r\n    ]\r\n  }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/product/3"
+			},
+			"response": {"product_name":"Updated Stylish T-Shirt","product_image":"https://example.com/images/updated-stylish-tshirt.jpg","rating":{"rating_id":0,"rating":4.8,"review":[{"comment":"Even better than before!","comment_image":"https://example.com/images/review2.jpg","comment_video":null,"id":6}],"id":3},"original_price":24.99,"promotional_price":19.99,"detail":{"product_description":"An even more comfortable and stylish t-shirt for everyday wear.","product_image_description":[{"urlImage":"https://example.com/images/updated-tshirt-front.jpg","id":7}],"product_hurry_up":"2024-11-15","product_color":[{"color":"Green","id":10}],"product_size":[{"size":"M","id":13}],"id":3},"id":3}
+		},
+		{
+			"name": "Delete Product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/product/2"
+			},
+			"response": ["Product has been deleted"]
+		}
+	]
+}
